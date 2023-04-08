@@ -1,0 +1,28 @@
+-- create a store database
+
+CREATE TABLE stiles_dogarama (id INTEGER PRIMARY KEY, name TEXT, function TEXT, quantity INTEGER, price INTEGER);
+
+insert into stiles_dogarama VALUES (1, "donut bed", "bed", 14, 30);
+insert into stiles_dogarama VALUES (2, "deshedding brush", "grooming", 20, 10);
+insert into stiles_dogarama VALUES (3, "oatmeal shampoo", "grooming", 19, 8);
+insert into stiles_dogarama VALUES (4, "ear wipes", "grooming", 19, 11);
+insert into stiles_dogarama VALUES (5, "nail clippers", "grooming", 15, 10);
+insert into stiles_dogarama VALUES (6, "deodorizing spray", "grooming", 18, 21);
+insert into stiles_dogarama VALUES (7, "pillow bed", "bed", 5, 35);
+insert into stiles_dogarama VALUES (8, "hamburger bed", "bed", 6, 40);
+insert into stiles_dogarama VALUES (9, "elevated bed", "bed", 12, 55);
+insert into stiles_dogarama VALUES (10, "peanut butter grain free", "treats", 15, 20);
+insert into stiles_dogarama VALUES (11, "training treats", "treats", 21, 12);
+insert into stiles_dogarama VALUES (12, "smart sticks", "treats", 12, 10);
+insert into stiles_dogarama VALUES (13, "nesting toy", "toys", 20, 12);
+insert into stiles_dogarama VALUES (14, "squeaker balls", "toys", 18, 5);
+insert into stiles_dogarama VALUES (15, "treat dispenser ball", "toys", 9, 25);
+
+-- display the database ordered by price
+SELECT * FROM stiles_dogarama 
+ORDER BY price;
+
+-- display the items with least stock
+SELECT * FROM stiles_dogarama
+ORDER BY quantity asc
+limit 5;
